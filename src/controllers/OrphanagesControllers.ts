@@ -20,7 +20,9 @@ export default {
 
         const orphanagesRepository = getRepository(Orphanages);
 
-        const orphanage = await orphanagesRepository.findOneOrFail(id);
+        const orphanage = await orphanagesRepository.findOneOrFail(id, {
+            relations: ["images"]
+        });
 
         return res.status(200).json(orphanage);
     },
