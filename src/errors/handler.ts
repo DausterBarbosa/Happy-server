@@ -1,7 +1,7 @@
 import {ErrorRequestHandler} from "express";
 
 const errorHandler:ErrorRequestHandler = (error, req, res, next) => {
-    console.log(error);
+    console.error(error);
 
     return res.status(500).json({status: "Internal server error"});
 }
