@@ -57,7 +57,7 @@ export default {
             about,
             instructions,
             opening_hours, 
-            open_in_weekends,
+            open_in_weekends: open_in_weekends === "true",
             images
         };
 
